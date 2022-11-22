@@ -120,7 +120,7 @@ def run_scf(mol, basis, **kwargs):
             valstr += 'converged in '
         else:
             valstr += 'NOT converged in '
-        valstr += '{:d} iterations.'.format(scf_drv.num_iter)
+        valstr += '{:d} iterations.'.format(scf_drv._num_iter)
         print(valstr, file=sys.stdout)
         if scf_drv.is_converged:
             valstr = 'Total Energy: {:.10f} au'.format(scf_drv.get_scf_energy())
